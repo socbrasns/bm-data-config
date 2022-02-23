@@ -1,5 +1,5 @@
 server:
-  port: 5000
+  port: 8081
 spring:
   application:
     name: Benchmarker Config Server
@@ -21,14 +21,14 @@ spring:
       client:
         auto-deregistration: true
         instance:
-          service-url: http://bm-data-config.sa-east-1.elasticbeanstalk.com
+          service-url: https://bm-data-config.herokuapp.com/
           name: Benchmarker Config Server
           metadata:
             user: 
               name: shaddowuser
               password: H7T*$
         url:
-        - http://bm-data-service-admin.sa-east-1.elasticbeanstalk.com
+        - http://bm-data-service-admin.herokuapp.com/
 management:
   endpoint:
     health:
