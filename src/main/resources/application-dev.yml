@@ -1,0 +1,40 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: bm-data-config
+  cloud:
+    config:
+      profile: default
+      label: dev
+      server:
+        git:
+          uri: https://github.com/socbrasns/bm-data-config-files.git
+          username: fulviusguelfi
+          password: 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
+          clone-on-start: true
+          refreshRate: 300
+          skipSslValidation: true
+          deleteUntrackedBranches: true
+      enabled: true
+  boot:
+    admin:
+      client:
+        auto-deregistration: true
+        instance:
+          service-url: http://localhost:${server.port}
+          name: bm-data-config
+          metadata:
+            user: 
+              name: shaddowuser
+              password: H7T*$
+        url:
+        - http://localhost:8765
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include : '*'
