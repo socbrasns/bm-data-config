@@ -6,7 +6,7 @@ public class Encoder {
 
 	public static void main(String[] args) {
 
-		System.out.println(new BCryptPasswordEncoder().encode("H7T*$"));
+		System.out.println(new BCryptPasswordEncoder().encode("user"));
 	}
 
 }

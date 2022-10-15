@@ -13,7 +13,6 @@ spring:
           username: fulviusguelfi
           password: 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
           clone-on-start: true
-          refreshRate: 300
           skipSslValidation: true
           deleteUntrackedBranches: true
       enabled: true
